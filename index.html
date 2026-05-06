@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система управления - ООО «Системные решения»</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="branding">
+                <h1>ООО «Системные решения»</h1>
+                <p class="dev-info">Разработчики: Рыгалов А.А., Старцева А.М.</p>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active">Текущие проекты</a></li>
+                    <li><a href="#">База клиентов</a></li>
+                    <li><a href="#">Архив ТЗ</a></li>
+                    <li><a href="#report-section">Отчетность</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="sales-module">
+            <h2>Новая заявка</h2>
+            <form id="new-task-form" class="form-grid">
+                <input type="text" id="task-name" placeholder="Введите название проекта клиента" required>
+                <input type="text" id="task-curator" placeholder="ФИО куратора проекта" required>
+                <input type="date" id="task-deadline" title="Срок сдачи" required>
+                <button type="submit" class="btn-primary">Создать задачу</button>
+            </form>
+        </section>
+
+        <section class="board">
+            <h2>Рабочая область (Разработка)</h2>
+            <div id="project-list" class="project-grid">
+                </div>
+        </section>
+
+        <section id="report-section" class="report-module">
+            <h2>Отчет по прогрессу</h2>
+            <div id="report-output" class="report-card">
+                <p>Нажмите кнопку для сбора актуальных данных по проектам...</p>
+            </div>
+            <button onclick="generateReport()" class="btn-secondary">Сформировать отчет</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
